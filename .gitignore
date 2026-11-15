@@ -1,1 +1,15 @@
+# Credenciais
 .env
+.env.*
+!.env.example
+
+# Sistema / editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Logs e temporários
+*.log
+tmp/

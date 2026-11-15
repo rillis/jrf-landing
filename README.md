@@ -22,7 +22,7 @@ O site fica disponível em `http://<host>:51006`.
 
 ## Deploy
 
-Publicado em https://jrf.rillis.com.br via Cloudflare Tunnel, apontando para a porta `51006`. Para testes após alterações, use o endereço local, pois o Cloudflare pode servir conteúdo em cache.
+Publicado em https://jrf.rillis.com.br. Para testes após alterações, use o endereço local (`http://localhost:51006`), pois o Cloudflare pode servir conteúdo em cache.
 
 ## Atualizar o conteúdo
 
