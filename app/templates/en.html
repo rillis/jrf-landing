@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ site.nome }} — Automotive tools</title>
+  <meta name="description" content="JRF Ferramentas is a Brazilian automotive tools store and authorized Kitest reseller, selling on Mercado Livre.">
+  <meta name="theme-color" content="#0b0b0c">
+  <link rel="canonical" href="{{ site.url }}/en">
+  <link rel="alternate" hreflang="pt-BR" href="{{ site.url }}/">
+  <link rel="alternate" hreflang="en" href="{{ site.url }}/en">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ site.nome }}">
+  <meta property="og:description" content="Brazilian automotive tools store, authorized Kitest reseller on Mercado Livre.">
+  <meta property="og:url" content="{{ site.url }}/en">
+  <link rel="icon" href="{{ url_for('static', filename='favicon.svg', v=v) }}" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css', v=v) }}">
+</head>
+<body>
+  <header class="topo">
+    <div class="wrap topo__linha">
+      <a class="marca" href="{{ url_for('en') }}" aria-label="{{ site.nome }} — home">
+        {% include "logos/horizontal.svg" %}
+      </a>
+      <nav class="menu" aria-label="Language">
+        <a href="{{ url_for('index') }}" hreflang="pt-BR" lang="pt-BR">Português</a>
+      </nav>
+      <a class="btn btn--pequeno" href="{{ site.loja_ml }}" target="_blank" rel="noopener">Shop on Mercado Livre</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero__grid">
+        <div class="hero__texto">
+          <p class="selo">Automotive tools · São Paulo, Brazil</p>
+          <h1>The right tools for the <span class="destaque">workshop</span>.</h1>
+          <p class="hero__sub">JRF Ferramentas is a Brazilian company selling automotive tools and equipment for testing, diagnostics and repair. We are an authorized reseller of Kitest, a Brazilian automotive equipment brand, and all our sales happen through our official store on Mercado Livre.</p>
+          <div class="hero__acoes">
+            <a class="btn" href="{{ site.loja_ml }}" target="_blank" rel="noopener">Visit our Mercado Livre store</a>
+          </div>
+        </div>
+        <ul class="hero__provas" aria-label="Highlights">
+          <li><strong>Invoice</strong><span>on every sale</span></li>
+          <li><strong>1 year</strong><span>Kitest warranty</span></li>
+          <li><strong>Brazil</strong><span>nationwide shipping</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="secao">
+      <div class="wrap estreito">
+        <h2 class="titulo-secao">About us</h2>
+        <div class="sobre">
+          <p>Based in São Paulo, JRF Ferramentas serves mechanics, workshops and car enthusiasts across Brazil. Every order ships with a Brazilian invoice (nota fiscal), and Kitest products carry a 1-year manufacturer warranty.</p>
+          <p>Orders are shipped through Mercado Livre Full and Mercado Envios to addresses in Brazil. Prices, stock and delivery times are always up to date on our store page.</p>
+          <p>For questions, email us at <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
+        </div>
+        <div class="sobre__cta">
+          <a class="btn" href="{{ site.loja_ml }}" target="_blank" rel="noopener">Go to the store</a>
+          <a class="btn btn--contorno" href="{{ url_for('index') }}" hreflang="pt-BR">Ver site em português</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="wrap rodape__grid">
+      <div>
+        <a class="marca marca--rodape" href="{{ url_for('en') }}" aria-label="{{ site.nome }} — home">
+          {% include "logos/empilhado.svg" %}
+        </a>
+        <p class="rodape__texto">Automotive tools and equipment. Authorized Kitest reseller.</p>
+      </div>
+      <div>
+        <h3 class="rodape__titulo">Contact</h3>
+        <ul class="rodape__lista">
+          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+          <li><a href="{{ site.loja_ml }}" target="_blank" rel="noopener">Mercado Livre store</a></li>
+          <li><a href="{{ url_for('index') }}" hreflang="pt-BR">Português</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="rodape__titulo">Company</h3>
+        <ul class="rodape__lista">
+          <li>{{ site.nome }}</li>
+          <li>CNPJ {{ site.cnpj }}</li>
+          <li>São Paulo, Brazil</li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap rodape__base">© {{ ano }} {{ site.nome }}. All rights reserved.</div>
+  </footer>
+</body>
+</html>

@@ -141,6 +141,11 @@ def garantia():
     return render_template("garantia.html")
 
 
+@app.get("/en")
+def en():
+    return render_template("en.html")
+
+
 @app.get("/health")
 def health():
     return {"ok": True}

@@ -54,7 +54,7 @@ JSON = {"Accept": "application/json"}
 
 
 def test_paginas(client):
-    for rota in ("/", "/garantia"):
+    for rota in ("/", "/garantia", "/en"):
         r = client.get(rota)
         assert r.status_code == 200
         assert "66.062.242/0001-18" in r.text
@@ -112,3 +112,10 @@ def test_assunto_fora_da_lista(client, discord):
     client.post("/contato", data=form(assunto="<script>"), headers=JSON)
     campos = {c["name"]: c["value"] for c in discord[0]["embeds"][0]["fields"]}
     assert campos["Assunto"] == main.ASSUNTOS[-1]
+
+
+def test_pagina_em_ingles(client):
+    r = client.get("/en")
+    assert '<html lang="en">' in r.text
+    assert 'hreflang="pt-BR"' in r.text
+    assert 'href="/en"' in client.get("/").text

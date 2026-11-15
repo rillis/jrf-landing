@@ -15,6 +15,7 @@ Uma landing page institucional para apresentar a empresa e levar o cliente até 
 - **Dúvidas frequentes:** nota fiscal, envio, garantia, trocas e devoluções.
 - **Garantia, trocas e devoluções:** página com a política completa.
 - **Contato:** e-mail e formulário. As mensagens chegam num canal do Discord.
+- **Versão em inglês (`/en`):** página curta apresentando a empresa e levando à loja no Mercado Livre.
 
 ## Feito com
 

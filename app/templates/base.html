@@ -7,6 +7,10 @@
   <meta name="description" content="{% block description %}JRF Ferramentas: ferramentas e equipamentos automotivos Kitest, com nota fiscal, garantia e envio para todo o Brasil pelo Mercado Livre.{% endblock %}">
   <meta name="theme-color" content="#0b0b0c">
   <link rel="canonical" href="{{ site.url }}{{ request.path }}">
+  {% if request.path == "/" %}
+  <link rel="alternate" hreflang="pt-BR" href="{{ site.url }}/">
+  <link rel="alternate" hreflang="en" href="{{ site.url }}/en">
+  {% endif %}
   <meta property="og:type" content="website">
   <meta property="og:title" content="{{ site.nome }}">
   <meta property="og:description" content="Ferramentas automotivas Kitest com nota fiscal e envio para todo o Brasil.">
@@ -59,6 +63,7 @@
           <li>{{ site.nome }}</li>
           <li>CNPJ {{ site.cnpj }}</li>
           <li>{{ site.cidade }}</li>
+          <li><a href="{{ url_for('en') }}" hreflang="en" lang="en">English</a></li>
         </ul>
       </div>
     </div>

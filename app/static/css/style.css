@@ -171,6 +171,11 @@ img, svg { display: block; }
 .pagina--centro { text-align: center; }
 .pagina--centro .pagina__cta { justify-content: center; }
 
+/* Página em inglês */
+.sobre p { color: var(--suave); font-size: 1.08rem; text-align: center; }
+.sobre a { color: var(--vermelho); }
+.sobre__cta { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 32px; }
+
 /* Rodapé */
 .rodape { background: #070708; border-top: 4px solid var(--vermelho); padding: 56px 0 0; }
 .rodape__grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 32px; }
