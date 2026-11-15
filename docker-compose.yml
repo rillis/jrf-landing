@@ -4,4 +4,4 @@ services:
     container_name: jrf-site
     restart: unless-stopped
     ports:
-      - "51015:80"
+      - "51006:80"

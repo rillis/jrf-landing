@@ -10,7 +10,7 @@ Site institucional da empresa JRF, servido por um container Nginx.
 
 ## Configuração
 
-Nenhuma variável de ambiente é necessária por enquanto. A porta exposta no host é a `51015` (definida em `docker-compose.yml`).
+Nenhuma variável de ambiente é necessária por enquanto. A porta exposta no host é a `51006` (definida em `docker-compose.yml`).
 
 ## Como rodar
 
@@ -18,7 +18,7 @@ Nenhuma variável de ambiente é necessária por enquanto. A porta exposta no ho
 docker compose up -d --build
 ```
 
-O site fica disponível em `http://<host>:51015`.
+O site fica disponível em `http://<host>:51006`.
 
 ## Atualizar o conteúdo
 
@@ -31,7 +31,7 @@ docker compose up -d --build
 ## Testes
 
 ```bash
-curl -I http://localhost:51015
+curl -I http://localhost:51006
 ```
 
 Deve retornar `HTTP/1.1 200 OK`.
