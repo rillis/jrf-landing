@@ -33,9 +33,10 @@ img, svg { display: block; }
 .estreito { max-width: 780px; }
 
 /* Marca */
-.marca { display: inline-flex; align-items: stretch; text-decoration: none; font-family: var(--titulo); font-weight: 800; font-size: 1.35rem; text-transform: uppercase; line-height: 1; }
-.marca__jrf { background: var(--vermelho); color: #fff; padding: .3em .45em; letter-spacing: .04em; transform: skewX(-10deg); }
-.marca__resto { padding: .3em .5em; letter-spacing: .12em; color: var(--texto); }
+.marca { display: inline-flex; align-items: center; text-decoration: none; }
+.marca .logo { height: 34px; width: auto; overflow: visible; }
+.marca .logo text { font-family: var(--titulo); }
+.marca--rodape .logo { height: 76px; }
 
 /* Topo */
 .topo { position: sticky; top: 0; z-index: 10; background: rgba(11, 11, 12, .88); backdrop-filter: blur(8px); border-bottom: 1px solid var(--borda); }
@@ -197,7 +198,7 @@ img, svg { display: block; }
 }
 @media (max-width: 560px) {
   .diferenciais, .form__linha, .rodape__grid { grid-template-columns: 1fr; }
-  .marca { font-size: 1.15rem; }
+  .marca .logo { height: 28px; }
   .btn--pequeno { font-size: .85rem; padding: .5em .8em; }
   .hero__acoes .btn { width: 100%; }
   .form { padding: 20px; }

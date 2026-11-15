@@ -1,0 +1,5 @@
+{# Baseado em logos/logo-jrf-principal.svg (sem o fundo) #}
+<svg class="logo" viewBox="190 190 1220 540" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+  <text x="800" y="560" text-anchor="middle" font-size="480" font-weight="800" fill="#e11d2a" letter-spacing="8">JRF</text>
+  <text x="800" y="690" text-anchor="middle" font-size="130" font-weight="600" fill="#e11d2a" letter-spacing="38">FERRAMENTAS</text>
+</svg>

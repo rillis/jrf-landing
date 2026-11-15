@@ -21,7 +21,7 @@
   <header class="topo">
     <div class="wrap topo__linha">
       <a class="marca" href="{{ url_for('index') }}" aria-label="{{ site.nome }} — início">
-        <span class="marca__jrf">JRF</span><span class="marca__resto">Ferramentas</span>
+        {% include "logos/horizontal.svg" %}
       </a>
       <nav class="menu" aria-label="Principal">
         <a href="{{ url_for('index') }}#loja">Loja</a>
@@ -40,7 +40,9 @@
   <footer class="rodape">
     <div class="wrap rodape__grid">
       <div>
-        <a class="marca" href="{{ url_for('index') }}"><span class="marca__jrf">JRF</span><span class="marca__resto">Ferramentas</span></a>
+        <a class="marca marca--rodape" href="{{ url_for('index') }}" aria-label="{{ site.nome }} — início">
+          {% include "logos/empilhado.svg" %}
+        </a>
         <p class="rodape__texto">Ferramentas e equipamentos automotivos. Revendedor Kitest.</p>
       </div>
       <div>
