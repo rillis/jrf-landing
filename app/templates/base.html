@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{{ site.nome }} — Ferramentas automotivas{% endblock %}</title>
+  <meta name="description" content="{% block description %}JRF Ferramentas: ferramentas e equipamentos automotivos Kitest, com nota fiscal, garantia e envio para todo o Brasil pelo Mercado Livre.{% endblock %}">
+  <meta name="theme-color" content="#0b0b0c">
+  <link rel="canonical" href="{{ site.url }}{{ request.path }}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ site.nome }}">
+  <meta property="og:description" content="Ferramentas automotivas Kitest com nota fiscal e envio para todo o Brasil.">
+  <meta property="og:url" content="{{ site.url }}{{ request.path }}">
+  <link rel="icon" href="{{ url_for('static', filename='favicon.svg', v=v) }}" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css', v=v) }}">
+</head>
+<body>
+  <header class="topo">
+    <div class="wrap topo__linha">
+      <a class="marca" href="{{ url_for('index') }}" aria-label="{{ site.nome }} — início">
+        <span class="marca__jrf">JRF</span><span class="marca__resto">Ferramentas</span>
+      </a>
+      <nav class="menu" aria-label="Principal">
+        <a href="{{ url_for('index') }}#loja">Loja</a>
+        <a href="{{ url_for('index') }}#faq">Dúvidas</a>
+        <a href="{{ url_for('garantia') }}">Garantia</a>
+        <a href="{{ url_for('index') }}#contato">Contato</a>
+      </nav>
+      <a class="btn btn--pequeno" href="{{ site.loja_ml }}" target="_blank" rel="noopener">Comprar no ML</a>
+    </div>
+  </header>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="rodape">
+    <div class="wrap rodape__grid">
+      <div>
+        <a class="marca" href="{{ url_for('index') }}"><span class="marca__jrf">JRF</span><span class="marca__resto">Ferramentas</span></a>
+        <p class="rodape__texto">Ferramentas e equipamentos automotivos. Revendedor Kitest.</p>
+      </div>
+      <div>
+        <h3 class="rodape__titulo">Atendimento</h3>
+        <ul class="rodape__lista">
+          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+          <li><a href="{{ site.loja_ml }}" target="_blank" rel="noopener">Loja no Mercado Livre</a></li>
+          <li><a href="{{ url_for('garantia') }}">Garantia, trocas e devoluções</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="rodape__titulo">Empresa</h3>
+        <ul class="rodape__lista">
+          <li>{{ site.nome }}</li>
+          <li>CNPJ {{ site.cnpj }}</li>
+          <li>{{ site.cidade }}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap rodape__base">© {{ ano }} {{ site.nome }}. Todos os direitos reservados.</div>
+  </footer>
+  <script src="{{ url_for('static', filename='js/main.js', v=v) }}" defer></script>
+</body>
+</html>

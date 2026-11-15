@@ -3,6 +3,12 @@
 .env.*
 !.env.example
 
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
 # Sistema / editores
 .DS_Store
 Thumbs.db
