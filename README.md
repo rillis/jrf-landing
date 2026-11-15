@@ -1,61 +1,23 @@
-# JRF Ferramentas — Site
+# JRF Ferramentas
 
-Landing page da JRF Ferramentas, loja de ferramentas automotivas no Mercado Livre. Apresenta a empresa, leva o cliente para a loja no ML, traz FAQ e política de garantia, e tem um formulário de contato que envia as mensagens para um canal do Discord.
+Site da **JRF Ferramentas**, loja de ferramentas e equipamentos automotivos no Mercado Livre, revendedora Kitest, em São Paulo - SP.
 
-Publicado em https://jrf.rillis.com.br.
+🔗 **https://jrf.rillis.com.br**
 
-## Estrutura
+## Sobre o site
 
-```
-app/
-├── main.py          rotas (/, /garantia, /contato, /health) e envio ao Discord
-├── templates/       páginas (Jinja2)
-└── static/          CSS, JS e favicon
-tests/               testes (pytest)
-```
+Uma landing page institucional para apresentar a empresa e levar o cliente até a loja no Mercado Livre, onde estão o catálogo, os preços e o estoque.
 
-Os dados da empresa (CNPJ, e-mail, link da loja) ficam no dicionário `SITE`, no início de `app/main.py`.
+- **Loja no Mercado Livre:** acesso direto à página oficial da loja.
+- **Reputação:** link para as avaliações dos clientes no Mercado Livre.
+- **Revendedor Kitest:** produtos originais, com garantia de 1 ano do fabricante.
+- **Diferenciais:** nota fiscal em todas as vendas, envio pelo Full e pelo Mercado Envios, entrega para todo o Brasil.
+- **Dúvidas frequentes:** nota fiscal, envio, garantia, trocas e devoluções.
+- **Garantia, trocas e devoluções:** página com a política completa.
+- **Contato:** e-mail e formulário. As mensagens chegam num canal do Discord.
 
-## Configuração
+## Feito com
 
-```bash
-cp .env.example .env   # e preencha
-```
-
-| Variável | O que é |
-|---|---|
-| `DISCORD_WEBHOOK_URL` | Webhook do canal do Discord que recebe as mensagens do formulário |
-
-Sem o webhook o site funciona normalmente, mas o formulário responde que não foi possível enviar.
-
-## Como rodar
-
-```bash
-docker compose up -d --build
-```
-
-O site fica em `http://<host>:51006`. Depois de alterar qualquer arquivo, rode o mesmo comando para reconstruir a imagem.
-
-Para rodar fora do Docker:
-
-```bash
-python3 -m venv .venv
-.venv/bin/pip install -r requirements-dev.txt
-.venv/bin/flask --app app.main run --port 8000
-```
-
-## Deploy
-
-O container `jrf-site` escuta na porta `51006` do host. Para testes após alterações, use o endereço local (`http://localhost:51006`), pois o Cloudflare pode servir conteúdo em cache.
-
-## Testes
-
-```bash
-.venv/bin/python -m pytest -q
-```
-
-Verificação rápida do container:
-
-```bash
-curl -s http://localhost:51006/health
-```
+- Python + Flask, servido pelo gunicorn em um container Docker
+- HTML, CSS e JavaScript puros, sem framework de front-end
+- Identidade visual em preto e vermelho, com a fonte Barlow Condensed
