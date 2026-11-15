@@ -20,6 +20,10 @@ docker compose up -d --build
 
 O site fica disponível em `http://<host>:51006`.
 
+## Deploy
+
+Publicado em https://jrf.rillis.com.br via Cloudflare Tunnel, apontando para a porta `51006`. Para testes após alterações, use o endereço local, pois o Cloudflare pode servir conteúdo em cache.
+
 ## Atualizar o conteúdo
 
 Edite os arquivos em `site/` e reconstrua a imagem:
