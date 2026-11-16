@@ -1,6 +1,0 @@
-{# Baseado em logos/logo-jrf-horizontal.svg (sem o fundo, para assentar no topo) #}
-<svg class="logo" viewBox="120 95 1680 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-  <text x="130" y="360" font-size="360" font-weight="800" fill="#e11d2a" letter-spacing="6">JRF</text>
-  <rect x="720" y="110" width="8" height="270" fill="#e11d2a"/>
-  <text x="780" y="300" font-size="120" font-weight="600" fill="#e11d2a" letter-spacing="26">FERRAMENTAS</text>
-</svg>

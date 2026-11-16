@@ -1,8 +1,2 @@
-.git
-.venv
-.env
-tests
-__pycache__
-*.pyc
-README.md
-docker-compose.yml
+*
+!docs/

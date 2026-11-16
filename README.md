@@ -14,11 +14,11 @@ Uma landing page institucional para apresentar a empresa e levar o cliente até 
 - **Diferenciais:** nota fiscal em todas as vendas, envio pelo Full e pelo Mercado Envios, entrega para todo o Brasil.
 - **Dúvidas frequentes:** nota fiscal, envio, garantia, trocas e devoluções.
 - **Garantia, trocas e devoluções:** página com a política completa.
-- **Contato:** e-mail e formulário. As mensagens chegam num canal do Discord.
+- **Atendimento pelo Mercado Livre:** dúvidas pelas perguntas do anúncio e pelas mensagens da compra.
 - **Versão em inglês (`/en`):** página curta apresentando a empresa e levando à loja no Mercado Livre.
 
 ## Feito com
 
-- Python + Flask, servido pelo gunicorn em um container Docker
-- HTML, CSS e JavaScript puros, sem framework de front-end
+- HTML e CSS puros, sem JavaScript nem framework
+- As páginas ficam em `docs/`, prontas para o GitHub Pages
 - Identidade visual em preto e vermelho, com a fonte Barlow Condensed

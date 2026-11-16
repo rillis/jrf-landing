@@ -5,6 +5,3 @@ services:
     restart: unless-stopped
     ports:
       - "51006:8000"
-    env_file:
-      - path: .env
-        required: false
